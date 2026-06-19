@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 13px;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 16px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: #cba6f7;
+      letter-spacing: 0.5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 3px;
+      color: #a6adc8;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: #313244;
+      border: 1px solid #45475a;
+      border-radius: 6px;
+      padding: 7px 10px;
+      color: #cdd6f4;
+      font-size: 12px;
+      font-family: inherit;
+      margin-bottom: 10px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus { border-color: #cba6f7; }
+
+    textarea { resize: vertical; min-height: 80px; }
+
+    button {
+      width: 100%;
+      padding: 9px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.85; }
+
+    #btn-grab {
+      background: #45475a;
+      color: #cdd6f4;
+      margin-bottom: 8px;
+    }
+
+    #btn-send {
+      background: #cba6f7;
+      color: #1e1e2e;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+      min-height: 18px;
+      color: #a6e3a1;
+    }
+    #status.error { color: #f38ba8; }
+  </style>
+</head>
+<body>
+  <h2>📤 Яндекс.Диск — загрузка текста</h2>
+
+  <label>OAuth токен</label>
+  <input id="token" type="password" placeholder="y0_AgAAAA...">
+
+  <label>Папка на диске</label>
+  <input id="folder" type="text" placeholder="/uploads">
+
+  <label>Имя файла</label>
+  <input id="filename" type="text" placeholder="selection.txt">
+
+  <label>Текст (выделите на странице или введите вручную)</label>
+  <textarea id="text" placeholder="Нажмите «Взять выделение»..."></textarea>
+
+  <button id="btn-grab">📋 Взять выделенный текст</button>
+  <button id="btn-send">🚀 Загрузить на Яндекс.Диск</button>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Яндекс Диск — Сохрани Выделенный Текст",
+  "version": "1.0.0",
+  "description": "Сохраняй выделенный текст на Яндекс Диск",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

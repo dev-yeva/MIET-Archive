@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>lab5</title>
+</head>
+<body>
+
+<h2>Выберите страну:</h2>
+
+<select id="country">
+  <option value="">Выбрать...</option>
+  <option value="Netherlands">Нидерланды</option>
+  <option value="Germany">    Германия</option>
+  <option value="France">     Франция</option>
+  <option value="Italy">      Италия</option>
+</select>
+
+<h2>Города:</h2>
+<ul id="cities"></ul>
+
+<script>
+  document.getElementById('country').addEventListener('change', function() {
+    const country = this.value; // this - DOM-элемент с id=country
+
+    if (!country) return;
+
+    fetch(`/cities?country=${country}`)
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('cities');
+        list.innerHTML = ''; // Очистка текущего списка
+
+        data.forEach(city => {
+          const li = document.createElement('li');
+          li.textContent = city;
+          list.appendChild(li);
+        });
+      })
+      .catch(err => console.error(err));
+  });
+</script>
+
+</body>
+</html>

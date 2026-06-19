@@ -1,0 +1,37 @@
+[
+  {
+    "id": "mail1",
+    "datatime": "2026-04-29T10:10:10Z",
+    "subject": "Первое",
+    "from": "andymailru@mail.ru",
+    "message": "Первая проверка"
+  },
+  {
+    "id": "mail2",
+    "datatime": "2026-04-29T10:10:15Z",
+    "subject": "Второе",
+    "from": "andymailru@mail.ru",
+    "message": "Вторая проверка"
+  },
+  {
+    "id": "mail3",
+    "datatime": "2026-04-29T10:10:20Z",
+    "subject": "Третье",
+    "from": "andymailru@mail.ru",
+    "message": "Третья проверка"
+  },
+  {
+    "id": "mail100",
+    "datatime": "2026-04-29T12:30:00Z",
+    "subject": "Hello from client",
+    "from": "client@mail.com",
+    "message": "Test message"
+  },
+  {
+    "id": "mail999999",
+    "datatime": "2026-04-29T12:30:00Z",
+    "subject": "Hello from client",
+    "from": "client@mail.com",
+    "message": "Test message"
+  }
+]

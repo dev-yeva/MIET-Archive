@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <title>Страница {{ page_number }}</title>
+  </head>
+
+    <body>
+        <nav>
+            {% for i in range(1, joke_count+1) %}
+                <a href="/{{ i }}">{{ i }}</a>
+            {% endfor %}
+        </nav>
+
+        <h1>Страница {{ page_number }}</h1>
+
+        <p>{{ joke }}</p>
+
+    </body>
+</html>
